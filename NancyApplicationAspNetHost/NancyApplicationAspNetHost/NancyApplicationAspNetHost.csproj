@@ -73,7 +73,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Abstract\IUserStorage.cs" />
+    <Compile Include="Model\Concrete\Storage.cs" />
     <Compile Include="Modules\NancyFxModule.cs" />
+    <Compile Include="Modules\UsersModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
