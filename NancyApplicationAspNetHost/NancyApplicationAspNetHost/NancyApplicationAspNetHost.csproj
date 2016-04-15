@@ -70,12 +70,17 @@
   <ItemGroup>
     <Content Include="Views\Hello.html" />
     <Content Include="Views\Index.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Abstract\IUserStorage.cs" />
+    <Compile Include="Model\Concrete\Dish.cs" />
+    <Compile Include="Model\Concrete\DishesRepository.cs" />
     <Compile Include="Model\Concrete\SouthParkUsers.cs" />
     <Compile Include="Model\Concrete\Storage.cs" />
+    <Compile Include="Modules\DishModule.cs" />
     <Compile Include="Modules\NancyFxModule.cs" />
     <Compile Include="Modules\RouteModule.cs" />
     <Compile Include="Modules\UsersModule.cs" />
