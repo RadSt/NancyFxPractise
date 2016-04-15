@@ -18,7 +18,7 @@ namespace NancyApplicationAspNetHost.Modules
         //    Get["/GetALl"] = ctx => Response.AsJson(DishesRepository.GetAllDishes());
         //}
 
-        public DishModule()
+        public DishModule() : base("/Dish")
         {
             Post["/Add"] = ctx =>
             {
