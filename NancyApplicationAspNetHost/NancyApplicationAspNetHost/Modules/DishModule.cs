@@ -1,20 +1,33 @@
 ﻿using Nancy;
+using Nancy.ModelBinding;
 using NancyApplicationAspNetHost.Model.Concrete;
 
 namespace NancyApplicationAspNetHost.Modules
 {
     public class DishModule : NancyModule
     {
-        public DishModule() : base("/Dish")
+        //public DishModule() : base("/Dish")
+        //{
+        //    Post["/Add"] = ctx =>
+        //    {
+        //        var dish = new Dish {Id = Request.Form.Id, Name = Request.Form.Name, IsSpicy = Request.Form.IsSpicy};
+        //        DishesRepository.AddDish(dish);
+        //        return new Response {StatusCode = HttpStatusCode.Accepted};
+        //    };
+
+        //    Get["/GetALl"] = ctx => Response.AsJson(DishesRepository.GetAllDishes());
+        //}
+
+        public DishModule()
         {
             Post["/Add"] = ctx =>
             {
-                var dish = new Dish {Id = Request.Form.Id, Name = Request.Form.Name, IsSpicy = Request.Form.IsSpicy};
+                var dish = this.Bind<Dish>();
                 DishesRepository.AddDish(dish);
-                return new Response {StatusCode = HttpStatusCode.Accepted};
+                return new Response { StatusCode = HttpStatusCode.Accepted };
             };
 
-            Get["/GetALl"] = ctx => Response.AsJson(DishesRepository.GetAllDishes());
+            Get["/GetAll"] = ctx => Response.AsJson(DishesRepository.GetAllDishes());
         }
     }
 }

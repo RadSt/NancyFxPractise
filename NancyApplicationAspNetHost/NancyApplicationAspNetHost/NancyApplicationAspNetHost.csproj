@@ -78,6 +78,7 @@
     <Compile Include="Model\Abstract\IUserStorage.cs" />
     <Compile Include="Model\Concrete\Dish.cs" />
     <Compile Include="Model\Concrete\DishesRepository.cs" />
+    <Compile Include="Model\Concrete\Ingridients.cs" />
     <Compile Include="Model\Concrete\SouthParkUsers.cs" />
     <Compile Include="Model\Concrete\Storage.cs" />
     <Compile Include="Modules\DishModule.cs" />
