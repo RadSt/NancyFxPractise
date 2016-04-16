@@ -1,4 +1,6 @@
-﻿using Nancy;
+﻿using System.Collections.Generic;
+using Nancy;
+using NancyApplicationAspNetHost.Model.Concrete;
 
 namespace NancyApplicationAspNetHost.Modules
 {
@@ -6,7 +8,11 @@ namespace NancyApplicationAspNetHost.Modules
     {
         public ViewModule() : base("/views")
         {
-            Get["/"] = param => View["View.html"];
+            Get["/"] = param =>
+            {
+                List<Dish> dishes = DishesRepository.GetAllDishes();
+                return View["View.html", dishes];
+            };
         }
     }
 }
