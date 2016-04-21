@@ -1,0 +1,19 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "NancySelfHostingDnx.DAL Class Library",
+  "authors": [ "Desan" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+        "EntityFramework.Commands": "7.0.0-rc1-final",
+        "EntityFramework.SqlServer": "7.0.0-beta8",
+        "Microsoft.AspNet.Identity.Core": "2.2.1",
+        "Microsoft.AspNet.Identity": "3.0.0-rc1-final"
+      }
+    }
+  }
+}
