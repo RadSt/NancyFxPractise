@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>VRM - Управление сообществами Вконтакте</title>
+    <script src="~/lib/es6-shim.min.js"></script>
+    <script src="~/lib/system-polyfills.js"></script>
+    <script src="~/lib/shims_for_IE.js"></script>
+    <script src="~/lib/angular2-polyfills.js"></script>
+    <script src="~/lib/system.js"></script>
+    <script src="~/lib/rx.js"></script>
+    <script src="~/lib/angular2.dev.js"></script>
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    defaultExtension: 'js'
+                }
+            }
+        });
+    </script>
+    <script>
+        System.import('app/app').then(null, console.error.bind(console));
+    </script>
+</head>
+<body>
+    <span>Hi</span><br />
+    <my-app></my-app>
+</body>
+</html>
