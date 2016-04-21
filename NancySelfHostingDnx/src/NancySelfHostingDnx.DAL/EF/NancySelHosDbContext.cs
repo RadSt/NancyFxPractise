@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Entity;
+using NancySelfHostingDnx.DAL.Models;
 
 namespace NancySelfHostingDnx.DAL.EF
 {
@@ -8,5 +9,7 @@ namespace NancySelfHostingDnx.DAL.EF
         {
             base.OnModelCreating(builder);
         }
+
+        public virtual DbSet<UserProfile>  UserProfiles { get; set; }
     }
 }
