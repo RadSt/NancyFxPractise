@@ -22,7 +22,10 @@
     "dnx451": {
       "dependencies": {
         "Nancy": "2.0.0-alpha",
-        "Nancy.Hosting.Self": "2.0.0-alpha"
+        "Nancy.Hosting.Self": "2.0.0-alpha",
+        "EntityFramework.Commands": "7.0.0-rc1-final",
+        "EntityFramework.SqlServer": "7.0.0-beta8",
+        "Microsoft.Framework.Configuration": "1.0.0-beta8"
       }
     }
   },
