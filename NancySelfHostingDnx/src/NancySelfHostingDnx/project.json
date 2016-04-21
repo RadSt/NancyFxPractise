@@ -25,5 +25,10 @@
         "Nancy.Hosting.Self": "2.0.0-alpha"
       }
     }
-  }
+  },
+  "exclude": [ "wwwroot", "node_modules" ],
+  "publishExclude": [
+    "**.user",
+    "**.vspscc"
+  ]
 }
