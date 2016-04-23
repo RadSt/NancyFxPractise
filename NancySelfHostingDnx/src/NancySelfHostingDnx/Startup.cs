@@ -3,9 +3,9 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
-using Microsoft.Data.Entity;
+using NancySelfHostingDnx.DAL.EF;
 
-namespace ExternalEntityFramework.Data
+namespace NancySelfHostingDnx
 {
     public class Startup
     {
@@ -19,12 +19,11 @@ namespace ExternalEntityFramework.Data
 
             Configuration = builder.Build();
         }
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFramework()
                 .AddSqlServer()
-                .AddDbContext<ApplicationDbContext>(options =>
+                .AddDbContext<NancySelHosDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
         }
         public void Configure(IApplicationBuilder app)
